@@ -1,15 +1,15 @@
 import * as React from "react";
 
-const getCommentWord = (commentsCount) => {
+const getComment = (commentsCount) => {
     if (commentsCount > 1) {
-        return "comments"
+        return `${commentsCount} comments`
     }
     if (commentsCount === 1) {
-        return "comment"
+        return "1 comment"
     }
     return "discuss";
 }
 
 export const StoryComments = ({descendants}) => (
-    <span>{descendants} {getCommentWord(descendants)}</span>
-  );
+    <span>{getComment(descendants)}</span>
+);

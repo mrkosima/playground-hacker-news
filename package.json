@@ -1,7 +1,12 @@
 {
   "name": "playground-hacker-news",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "humanize-duration": "^3.15.3",
     "i": "^0.3.6",
@@ -15,22 +20,29 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-mock-store": "^1.5.3"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "*.test.js"
+        ],
+        "rules": {
+          "import/first": "off"
+        }
+      }
+    ]
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.5"
-  }
+  ]
 }

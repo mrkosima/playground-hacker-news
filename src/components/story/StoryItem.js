@@ -1,8 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { loadItem, clearItem } from "../../ducks/items/actions";
+import { loadItem, removeItem } from "../../ducks/items/actions";
 import { StoryTitle } from "./StoryTitle"
-import { StoryDetails } from "./StoryDetails"
+import { StoryDetails } from "./details/StoryDetails"
 
 export class StoryItemComponent extends React.PureComponent {
   componentDidMount() {
@@ -23,7 +23,7 @@ export class StoryItemComponent extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    this.props.clearItem(this.props.id);
+    this.props.removeItem(this.props.id);
   }
 }
 
@@ -33,7 +33,7 @@ const mapStateToProps = (state, props ) => ({
 
 const mapDispatchToProps = {
   loadItem,
-  clearItem
+  removeItem
 };
 
 export const StoryItem = connect(

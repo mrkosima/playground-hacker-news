@@ -2,7 +2,7 @@
 - tests
 - travis - ci/cd
 - design/css
-
+- API error handling
 - reuse Stories for newstories / beststories
 - views: comments / asks / poll / job
 - routing

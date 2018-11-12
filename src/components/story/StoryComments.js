@@ -10,6 +10,6 @@ const getCommentWord = (commentsCount) => {
     return "discuss";
 }
 
-export const ItemComments = ({desdedants}) => (
-    <span>{desdedants} {getCommentWord(desdedants)}</span>
+export const StoryComments = ({descendants}) => (
+    <span>{descendants} {getCommentWord(descendants)}</span>
   );

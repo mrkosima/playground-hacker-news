@@ -1,8 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { loadItem, clearItem } from "../../ducks/items/actions";
-import {ItemTitle} from "./ItemTitle"
-import {ItemDetails} from "./ItemDetails"
+import { StoryTitle } from "./StoryTitle"
+import { StoryDetails } from "./StoryDetails"
 
 export class StoryItemComponent extends React.PureComponent {
   componentDidMount() {
@@ -16,8 +16,8 @@ export class StoryItemComponent extends React.PureComponent {
     const { title, url } = this.props.item;
     return (
         <>
-            <ItemTitle url={url} title={title}/>
-            <ItemDetails {...this.props.item}/>
+            <StoryTitle url={url} title={title}/>
+            <StoryDetails {...this.props.item}/>
         </>
     );
   }

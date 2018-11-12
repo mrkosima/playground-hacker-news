@@ -1,5 +1,5 @@
 import * as React from "react";
 
-export const ItemAuthor = props => (
+export const StoryAuthor = props => (
     <span>by {props.by}</span>
 );

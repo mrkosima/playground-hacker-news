@@ -1,3 +1,12 @@
+## TODO
+- design/css
+- tests
+- travis - ci/cd
+- routing between stories
+- comments
+- data loading templates
+- google analytics
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

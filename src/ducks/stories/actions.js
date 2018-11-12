@@ -1,4 +1,4 @@
-import { STORIES_LOADING, STORIES_LOADED } from "./consts";
+import { STORIES_LOADING, STORIES_LOADED, STORIES_NEXT_PAGE } from "./consts";
 import { fetchTopStories } from "../../api/HackerService";
 
 export const storiesLoading = () => ({
@@ -7,7 +7,11 @@ export const storiesLoading = () => ({
 
 export const storiesLoaded = stories => ({
   type: STORIES_LOADED,
-  payload: stories
+  payload: stories.slice(0, 6)
+});
+
+export const nextPage = () => ({
+  type: STORIES_NEXT_PAGE,
 });
 
 export const loadStories = () => dispatch => {

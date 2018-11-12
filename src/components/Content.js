@@ -8,7 +8,7 @@ import { StubComponent } from "./Stub";
 export class ContentComponent extends React.PureComponent {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <>
           <HeaderComponent />
           <Switch>

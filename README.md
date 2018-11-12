@@ -1,11 +1,15 @@
 ## TODO
-- design/css
 - tests
 - travis - ci/cd
-- routing between stories
-- comments
-- data loading templates
+- design/css
+
+- reuse Stories for newstories / beststories
+- views: comments / asks / poll / job
+- routing
+    - views
+    - pagination
 - google analytics
+- ws live data
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

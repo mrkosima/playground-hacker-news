@@ -1,8 +1,18 @@
 import * as React from "react";
 import { StoryItem } from "./StoryItem";
 import { connect } from "react-redux";
-import { loadStories, nextPage } from "../../ducks/stories/actions";
-import { selectStoriesIdsOnCurrentPage, areStoriesLoading, selectNextPageEnabled, selectStoriesCurrentPage, selectCurrentPageStartIndex } from "../../ducks/storeSelectors";
+import { 
+  loadStories, 
+  nextPage, 
+  clearStories
+} from "../../ducks/stories/actions";
+import { 
+  selectStoriesIdsOnCurrentPage, 
+  areStoriesLoading, 
+  selectNextPageEnabled, 
+  selectStoriesCurrentPage, 
+  selectCurrentPageStartIndex 
+} from "../../ducks/storeSelectors";
 
 export class StoriesComponent extends React.PureComponent {
   componentDidMount() {
@@ -30,6 +40,10 @@ export class StoriesComponent extends React.PureComponent {
       </div>
     );
   }
+
+  componentWillUnmount() {
+    this.props.clearStories();
+  }
 }
 
 const mapStateToProps = state => ({
@@ -44,6 +58,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   loadStories: loadStories,
   nextPage: nextPage,
+  clearStories: clearStories,
 };
 
 export const Stories = connect(

@@ -29,7 +29,7 @@ describe("ducks/items/actions", () => {
     });
   });
 
-  fdescribe("loadItem", () => {
+  describe("loadItem", () => {
     const ID = 777;
 
     beforeEach(() => {

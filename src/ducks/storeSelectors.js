@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 
-const MAX_STORIES_PER_PAGE = 5;
+const MAX_STORIES_PER_PAGE = 25;
 
 const selectStories = state => state.stories;
 const selectStoriesIds = state => selectStories(state).ids;
@@ -17,5 +17,4 @@ export const selectStoriesPageIds = createSelector(
 export const selectStoriesIdsOnCurrentPage = state => selectStoriesPageIds(state, selectStoriesCurrentPage(state));
 export const selectCurrentPageStartIndex = state => selectStoriesCurrentPage(state) * MAX_STORIES_PER_PAGE;
 export const selectItems = state => state.items;
-
 export const selectNextPageEnabled = state => selectStoriesIds(state).length > selectCurrentPageStartIndex(state) + MAX_STORIES_PER_PAGE

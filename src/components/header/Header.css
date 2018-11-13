@@ -1,0 +1,17 @@
+header {
+    background-color: #333;
+    color: white;
+}
+
+header nav {
+    display: flex;
+}
+
+header a {
+    position: relative;
+    width: 100%;
+    color: inherit;
+    padding: 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import { HeaderComponent } from "./Header";
-import { FooterComponent } from "./Footer";
+import { HeaderComponent } from "./header/Header";
 import { Stories } from "./story/Stories";
 import { StubComponent } from "./Stub";
 
@@ -16,7 +15,6 @@ export class ContentComponent extends React.PureComponent {
             <Route path="/top" component={Stories} />
             <Route component={StubComponent} />
           </Switch>
-          <FooterComponent />
         </>
       </BrowserRouter>
     );

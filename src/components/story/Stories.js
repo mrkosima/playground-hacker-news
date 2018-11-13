@@ -14,6 +14,8 @@ import {
   selectCurrentPageStartIndex 
 } from "../../ducks/storeSelectors";
 
+import "./Stories.css";
+
 export class StoriesComponent extends React.PureComponent {
   componentDidMount() {
     this.props.loadStories();
@@ -28,15 +30,15 @@ export class StoriesComponent extends React.PureComponent {
     return this.props.loading || !this.props.stories ? (
       "...loading"
     ) : (
-      <div>
-      <ol start={this.props.startIndex + 1}>
-        {this.props.stories.map(s => (
-          <li key={s}>
-            <StoryItem id={s} />
-          </li>
-        ))}
-      </ol>
-      {this.props.nextPageEnabled && <button onClick={this.props.nextPage}>More...</button>}
+      <div className="stories">
+        <ol>
+          {this.props.stories.map((s, i) => (
+            <li key={s} className="story">
+              <StoryItem id={s} storyIndex={this.props.startIndex + i + 1}/>
+            </li>
+          ))}
+        </ol>
+        {this.props.nextPageEnabled && <div className="nextPage" onClick={this.props.nextPage}><span>More</span></div>}
       </div>
     );
   }

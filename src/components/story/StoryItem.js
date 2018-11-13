@@ -1,6 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { loadItem, removeItem } from "../../ducks/items/actions";
+import { StoryIcon } from "./StoryIcon";
 import { StoryTitle } from "./StoryTitle"
 import { StoryDetails } from "./details/StoryDetails"
 
@@ -13,12 +14,16 @@ export class StoryItemComponent extends React.PureComponent {
     if (!this.props.item) {
       return <div>Loading...</div>;
     }
-    const { title, url } = this.props.item;
+    // todo - use storyIndex from props
+    const { item } = this.props;
+    const { title, url } = item;
     return (
-        <>
-            <StoryTitle url={url} title={title}/>
-            <StoryDetails {...this.props.item}/>
-        </>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="storyLink">
+        <StoryIcon url={url} title={title}>
+              <StoryTitle title={title}/>
+              <StoryDetails {...this.props.item}/>
+            </StoryIcon>
+        </a>
     );
   }
 

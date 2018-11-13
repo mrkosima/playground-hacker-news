@@ -3,10 +3,9 @@ import { StoryScore } from "./StoryScore";
 import { StoryAuthor } from "./StoryAuthor";
 import { StoryTime } from "./StoryTime";
 import { StoryComments } from "./StoryComments";
-import "./StoryDetails.css";
 
 export const StoryDetails = props => (
-    <p className="StoryDetails">
+    <p className="storyDetails">
         <StoryScore {...props} />
         {" | "}
         <StoryAuthor {...props} />

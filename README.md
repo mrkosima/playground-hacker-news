@@ -6,12 +6,17 @@
 [Demo](https://mrkosima.github.io/playground-hacker-news/)
 
 ### TODO
-- design/css
-- API error handling
-- reuse Stories for newstories / beststories
-- views: comments / asks / poll / job
+- views
+    - newstories / beststories (reuse StoriesComponent)
+    - comments 
+    - asks 
+    - poll
+    - job
 - routing
     - views
-    - pagination
+    - pagination + (page number / item index)
+- API error handling
+- postCss
+- mobile menu
 - google analytics
 - ws live data

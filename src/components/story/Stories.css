@@ -1,0 +1,60 @@
+.stories li {
+    list-style-type: none;
+}
+
+.stories .storyLink {
+    position: relative;
+    padding: 0 0 1em 3em;
+    text-decoration: none;
+    user-select: none;
+    display: inline-block;
+    width: 100%;
+    /* padding: 2.5em 0.5em; */
+    box-sizing: border-box;
+    font-weight: 400;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.stories .storyLink:link {
+    color: #333;
+}
+
+.stories .storyLink:visited {
+    color: #99b;
+}
+
+.stories .storyLink:hover,
+.stories .storyLink:active {
+    background-color: #ffcdb3;
+}
+
+.stories .storyIcon {
+    position: absolute;
+    left: 0.75em;
+    top: 0.25em;
+}
+
+.stories .storyDetails {
+    margin-top: 0.3em;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: #333;
+}
+.stories .storyDetails span {
+    white-space: nowrap;
+}
+.stories .storyIndex {
+    display: inline-block;
+    width: 2em;
+}
+
+.stories .nextPage {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 1em 0;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    text-decoration: underline;
+    user-select: none;
+}

@@ -7,7 +7,7 @@ export const storiesLoading = () => ({
 
 export const storiesLoaded = stories => ({
   type: STORIES_LOADED,
-  payload: stories.slice(0, 6)
+  payload: stories,
 });
 
 export const nextPage = () => ({

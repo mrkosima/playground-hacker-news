@@ -8,7 +8,7 @@ const getComment = (commentsCount) => {
         return "1 comment"
     }
     return "discuss";
-}
+};
 
 export const StoryComments = ({descendants}) => (
     <span>{getComment(descendants)}</span>

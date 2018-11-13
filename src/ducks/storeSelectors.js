@@ -11,10 +11,9 @@ export const selectStoriesCurrentPage = state => selectStories(state).currentPag
 export const selectStoriesPageIds = createSelector(
     selectStoriesIds,
     selectStoriesCurrentPage,
-    (ids, page) => ids.slice(page * MAX_STORIES_PER_PAGE, (page + 1) * MAX_STORIES_PER_PAGE)
+    (ids, page) => ids.slice(page * MAX_STORIES_PER_PAGE, (page + 1) * MAX_STORIES_PER_PAGE),
 );
 
 export const selectStoriesIdsOnCurrentPage = state => selectStoriesPageIds(state, selectStoriesCurrentPage(state));
 export const selectCurrentPageStartIndex = state => selectStoriesCurrentPage(state) * MAX_STORIES_PER_PAGE;
-export const selectItems = state => state.items;
 export const selectNextPageEnabled = state => selectStoriesIds(state).length > selectCurrentPageStartIndex(state) + MAX_STORIES_PER_PAGE

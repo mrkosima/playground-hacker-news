@@ -5,18 +5,18 @@ import { Stories } from "./story/Stories";
 import { StubComponent } from "./Stub";
 
 export class ContentComponent extends React.PureComponent {
-  render() {
-    return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <>
-          <HeaderComponent />
-          <Switch>
-            <Redirect exact path="/" to="/top" />
-            <Route path="/top" component={Stories} />
-            <Route component={StubComponent} />
-          </Switch>
-        </>
-      </BrowserRouter>
-    );
-  }
+    render() {
+        return (
+            <BrowserRouter basename={`${process.env.PUBLIC_URL}/#`}>
+                <>
+                    <HeaderComponent />
+                    <Switch>
+                        <Redirect exact path={`${process.env.PUBLIC_URL}/`} to="/top" />
+                        <Route path="/top" component={Stories} />
+                        <Route component={StubComponent} />
+                    </Switch>
+                </>
+            </BrowserRouter>
+        );
+    }
 }

@@ -14,4 +14,4 @@ export const StoryDetails = props => (
         {" | "}
         <StoryComments {...props} />
     </p>
-)
+);
